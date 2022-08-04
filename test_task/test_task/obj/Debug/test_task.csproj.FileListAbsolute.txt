@@ -1,0 +1,11 @@
+C:\Users\stajyer\source\repos\test_task\test_task\bin\Debug\test_task.exe.config
+C:\Users\stajyer\source\repos\test_task\test_task\bin\Debug\test_task.exe
+C:\Users\stajyer\source\repos\test_task\test_task\bin\Debug\test_task.pdb
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.csproj.AssemblyReference.cache
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.csproj.SuggestedBindingRedirects.cache
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.FrmTask.resources
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.Properties.Resources.resources
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.csproj.GenerateResource.cache
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.csproj.CoreCompileInputs.cache
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.exe
+C:\Users\stajyer\source\repos\test_task\test_task\obj\Debug\test_task.pdb
