@@ -1,2 +1,2 @@
-# Task-Kullan-m-
+# Task
 C# dilinde ileri seviye sınıf kullanımları:
