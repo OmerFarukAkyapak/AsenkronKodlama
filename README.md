@@ -1,2 +1,2 @@
-# Task
-C# dilinde ileri seviye sınıf kullanımları:
+# ASENKRON KODLAMA
+C# dilinde asenkron kodlama için ileri seviye sınıf kullanımı "Thread , Task , Action , Delegate , IProgress" ve BackGroundWorker Tool
