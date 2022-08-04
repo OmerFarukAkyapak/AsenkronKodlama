@@ -37,6 +37,8 @@ namespace test_task
 
         private async void btnAction_Click(object sender, EventArgs e)  //Action-Task Kullanımı
         {
+            lblResult.Text = "";
+
             await Task.Run(() =>
             {
                 for (int i = 0; i < 10; i++)
@@ -72,6 +74,8 @@ namespace test_task
 
         private async void btnIProgress_Click(object sender, EventArgs e) //Progress-Action-Task Kullanımı
         {
+            lblResult.Text = "";
+
             Action<string> actionProgress = new Action<string>(data =>
             {
                 lblResult.Text = data;
@@ -115,6 +119,8 @@ namespace test_task
 
         private void btnBackGW_Click(object sender, EventArgs e)    //BackGroundWorker Kullanımı
         {
+            lblResult.Text = "";
+
             backgroundWorker1.RunWorkerAsync();
         }
 
@@ -138,6 +144,19 @@ namespace test_task
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e) //Result 
         {
             MessageBox.Show("İşlem Tamamlandı!", "Task/BackGW");
+        }
+
+        private void btAll_Click(object sender, EventArgs e) // Tüm butonlara tıklama
+        {   
+            /*  
+             * İstediğimiz kadar buton clicklerin yerini değiştirsekte
+             *  ilk biten buton clickimiz IProgress sınıfı kullanılan asenkron kodlama butonudur.
+             */
+
+            lblResult.Text = "";
+            btnAction_Click(sender, e);
+            btnBackGW_Click(sender, e);
+            btnIProgress_Click(sender, e);
         }
     }
 }
