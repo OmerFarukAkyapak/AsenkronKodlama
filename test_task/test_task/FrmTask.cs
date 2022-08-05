@@ -37,6 +37,9 @@ namespace test_task
 
         private async void btnAction_Click(object sender, EventArgs e)  //Action-Task Kullanımı
         {
+            var buton = sender as Button;
+            Console.WriteLine($"{buton.Name} basıldı.");
+
             lblResult.Text = "";
 
             await Task.Run(() =>
@@ -74,14 +77,18 @@ namespace test_task
 
         private async void btnIProgress_Click(object sender, EventArgs e) //Progress-Action-Task Kullanımı
         {
+            var buton = sender as Button;
+            Console.WriteLine($"{buton.Name} basıldı.");
+
             lblResult.Text = "";
+
 
             Action<string> actionProgress = new Action<string>(data =>
             {
                 lblResult.Text = data;
             });
 
-            IProgress<string> progress = new Progress<string>(actionProgress);
+            IProgress<string> progress = new Progress<string>(actionProgress);            
 
             Action actionTask = new Action(() =>
             {
@@ -94,6 +101,7 @@ namespace test_task
 
             var task = Task.Run(actionTask);
             await task;
+
 
             MessageBox.Show("İşlem Tamamlandı!", "Task/IProgress");
 
@@ -119,6 +127,9 @@ namespace test_task
 
         private void btnBackGW_Click(object sender, EventArgs e)    //BackGroundWorker Kullanımı
         {
+            var buton = sender as Button;
+            Console.WriteLine($"{buton.Name} basıldı.");
+
             lblResult.Text = "";
 
             backgroundWorker1.RunWorkerAsync();
@@ -147,16 +158,20 @@ namespace test_task
         }
 
         private void btAll_Click(object sender, EventArgs e) // Tüm butonlara tıklama
-        {   
+        {
             /*  
              * İstediğimiz kadar buton clicklerin yerini değiştirsekte
              *  ilk biten buton clickimiz IProgress sınıfı kullanılan asenkron kodlama butonudur.
              */
 
             lblResult.Text = "";
-            btnAction_Click(sender, e);
-            btnBackGW_Click(sender, e);
-            btnIProgress_Click(sender, e);
+
+
+            btnBackGW_Click(btnBackGW, EventArgs.Empty);
+            btnIProgress_Click(btnIProgress, EventArgs.Empty);
+            btnAction_Click(btnAction, EventArgs.Empty);
+
+
         }
     }
 }

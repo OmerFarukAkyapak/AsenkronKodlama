@@ -35,6 +35,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.btAll = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,18 +45,18 @@
             this.lblResult.AutoSize = true;
             this.lblResult.BackColor = System.Drawing.Color.DarkGray;
             this.lblResult.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblResult.Location = new System.Drawing.Point(22, 10);
+            this.lblResult.Location = new System.Drawing.Point(33, 10);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(57, 39);
+            this.lblResult.Size = new System.Drawing.Size(37, 39);
             this.lblResult.TabIndex = 0;
-            this.lblResult.Text = "10";
+            this.lblResult.Text = "0";
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAction
             // 
             this.btnAction.BackColor = System.Drawing.Color.Gainsboro;
             this.btnAction.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAction.Location = new System.Drawing.Point(12, 114);
+            this.btnAction.Location = new System.Drawing.Point(12, 200);
             this.btnAction.Name = "btnAction";
             this.btnAction.Size = new System.Drawing.Size(146, 74);
             this.btnAction.TabIndex = 1;
@@ -66,7 +68,7 @@
             // 
             this.btnIProgress.BackColor = System.Drawing.Color.Gainsboro;
             this.btnIProgress.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnIProgress.Location = new System.Drawing.Point(188, 114);
+            this.btnIProgress.Location = new System.Drawing.Point(188, 200);
             this.btnIProgress.Name = "btnIProgress";
             this.btnIProgress.Size = new System.Drawing.Size(146, 74);
             this.btnIProgress.TabIndex = 2;
@@ -78,7 +80,7 @@
             // 
             this.btnBackGW.BackColor = System.Drawing.Color.Gainsboro;
             this.btnBackGW.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnBackGW.Location = new System.Drawing.Point(362, 114);
+            this.btnBackGW.Location = new System.Drawing.Point(362, 200);
             this.btnBackGW.Name = "btnBackGW";
             this.btnBackGW.Size = new System.Drawing.Size(146, 74);
             this.btnBackGW.TabIndex = 3;
@@ -97,7 +99,7 @@
             // 
             this.btAll.BackColor = System.Drawing.Color.Gainsboro;
             this.btAll.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btAll.Location = new System.Drawing.Point(188, 216);
+            this.btAll.Location = new System.Drawing.Point(188, 302);
             this.btAll.Name = "btAll";
             this.btAll.Size = new System.Drawing.Size(146, 74);
             this.btAll.TabIndex = 4;
@@ -109,17 +111,43 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.lblResult);
-            this.panel1.Location = new System.Drawing.Point(212, 26);
+            this.panel1.Location = new System.Drawing.Point(212, 112);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(102, 59);
             this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkGray;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(91, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(370, 39);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "ASENKRON KODLAMA";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkGray;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(101, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(349, 39);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "THREAD ALISVERISI";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.ClientSize = new System.Drawing.Size(526, 322);
+            this.ClientSize = new System.Drawing.Size(526, 401);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btAll);
             this.Controls.Add(this.btnBackGW);
@@ -131,6 +159,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,5 +172,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btAll;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
